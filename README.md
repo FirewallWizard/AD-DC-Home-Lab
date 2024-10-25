@@ -3,12 +3,26 @@
 ![image](https://github.com/user-attachments/assets/d19559e5-e748-40a9-93e0-7e22bddc40e2)
 
 
-Overview:
+## Objective
+The project aimed to set up a fully functional Active Directory Domain Controller (ADDC) environment using VirtualBox, creating a private network with simulated users and clients for lab-based study and cybersecurity practice. The focus was on deploying Windows Server 2022 as a Domain Controller and configuring features like NAT, DHCP, and Active Directory, culminating in a Windows 10 client setup connected to the domain. This environment serves as a foundation for practicing network administration, user management, and eventual penetration testing.
 
-In this lab, I will be downloading and installing VirtualBox. Then download and install a Windows iso with 2022 ISO. Next, create a VM -> contains a domain controller, which houses Active Directory. Virtual Machine will be given two network adapters, one to connect to outside internet, and another one to connect to VirtualBox private network. Next, install Server 2022 which assigns IP addresses for the internal network/ After the IP address is set up, name the server install the Active Directory, and create a domain. Then configure NAT and routing so clients on the internal network can reach the internet through the internet controller. Then set up DHCP on DC so that when Windows 10 is created it automatically gets an IP address. Next, run a PowerShell script that automatically creates over 1000 users in the Active Directory. After creating users, create another virtual machine with Windows 10 on it. That virtual machine is connected to the private VirtualBox network. That machine will be named client1 and join it to the domain, then log into it through the domain controller.
+### Skills Learned
+- In-depth knowledge of Active Directory Domain Controller (ADDC) configuration and deployment.
+- Familiarity with Windows Server and Windows 10 networking setup, including IP addressing and NAT configuration.
+- Proficiency in configuring DHCP for automated IP allocation in a domain environment.
+- Hands-on experience with PowerShell scripting to automate user creation in Active Directory.
+- Understanding of virtual networking concepts and use of multiple network adapters in VirtualBox.
+- Strengthened skills in diagnosing and troubleshooting network connectivity and security settings.
 
-Understanding:
-Get a better understanding of the environment in the network as it relates to school, the office, etc., where you can take the same username and log into a bunch of different computers without doing anything
+### Tools Used
+- Oracle VirtualBox for virtual environment creation and configuration.
+- Windows Server 2022 and Windows 10 ISOs for virtual machine OS installations.
+- PowerShell for Active Directory user management and automation scripting.
+- Active Directory Domain Services (ADDS) for domain creation and user management.
+- Routing and Remote Access Service (RRAS) for NAT configuration and internet routing.
+- DHCP server in Windows Server for dynamic IP addressing within the private network.
+
+## Steps
 
 Install:
 I downloaded VirtualBox and the extension pack here. After VirtualBox is installed, download Windows 10 ISO. I used the media-creating tool and followed the prompts to create an ISO file.
